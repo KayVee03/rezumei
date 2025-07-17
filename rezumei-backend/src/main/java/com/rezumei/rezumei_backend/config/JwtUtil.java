@@ -13,9 +13,10 @@ import java.util.Map;
 
 @Component
 public class JwtUtil {
-    private static final String SECRET_KEY = "your-very-secure-64-byte-key-here-for-hs512-ensure-it-is-random-and-safe";
+    // Single-line 64-byte Base64-encoded key
+    private static final String SECRET_KEY = "fndShw7LJPtnJjFAjCJO60UlOfOaiQJGpTOfQERtzyY7DjIJrmlNsddK9EaXpDm3/hEnBXtlNbDHD9xmPg2kmA==";
     private final SecretKey secretKey = Keys.hmacShaKeyFor(Base64.getDecoder().decode(SECRET_KEY));
-    private final long expirationMs = 1000 * 60 * 60 * 10;
+    private final long expirationMs = 1000 * 60 * 60 * 10; // 10 hours
 
     public String generateToken(String email) {
         Map<String, Object> claims = new HashMap<>();
