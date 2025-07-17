@@ -1,0 +1,8 @@
+# Backend
+rezumei-backend/target/
+rezumei-backend/.idea/
+rezumei-backend/*.iml
+
+# Frontend
+rezumei-frontend/node_modules/
+rezumei-frontend/dist/
